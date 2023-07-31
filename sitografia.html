@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Title</title>
+    <style>
+        body {
+           font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Imposta l'altezza minima del corpo a 100% dell'altezza visibile */
+            margin: 0;
+        }
+
+        /* Aggiungi uno sfondo al menu */
+        nav {
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        nav::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("link_al_tuo_sfondo_menu.jpg");
+            background-size: cover;
+            opacity: 0.5; /* Opacità dell'immagine di sfondo */
+            z-index: -1;
+        }
+
+        nav a {
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+            margin-right: 20px; /* Aggiungi spazio tra le voci della navbar */
+        }
+
+        .center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: calc(100vh - 166px); /* Calcola la dimensione corretta per centrare il contenuto */
+        }
+
+        .content img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .content h2 {
+            font-size: 24px;
+        }
+
+        /* Classe per titoli e link con margine a destra maggiore */
+        .with-margin-right {
+            margin-right: 30px; /* Puoi regolare il valore del margine a tuo piacimento */
+        }
+
+         footer {
+            padding-top: 20px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            margin-top: auto; /* Imposta il margine superiore a "auto" per spingere il footer in fondo alla pagina */
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 5px; /* Aggiungi uno spazio tra i link nel footer */
+        }
+
+        /* Aggiungi stili per il footer quando si visualizza su dispositivi mobili */
+        @media (max-width: 767.98px) {
+              footer {
+            padding-top: 20px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            margin-top: auto; /* Imposta il margine superiore a "auto" per spingere il footer in fondo alla pagina */
+        }
+
+
+       footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 5px; /* Aggiungi uno spazio tra i link nel footer */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Posiziona il menu nell'header -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+            <div class="container">
+                <!-- Bottone per il menu a panino -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menu principale -->
+                <div class="collapse navbar-collapse mr-auto" id="navbarNav"> <!-- Aggiungi la classe "mr-auto" -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tkinter">Tkinter</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#flask">Flask</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#crittografia">Crittografia</a>
+                        </li>
+                        <li class="nav-item ml-auto"> <!-- Aggiungi la classe "ml-auto" -->
+                            <a class="nav-link" href="#link-utili">Link Utili</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Lista dei documenti che ti hanno aiutato a sviluppare questo materiale -->
+        <h4 class="with-margin-right">Programmazione python:</h4>
+        <a href="https://www.w3schools.com/python/" class="with-margin-right">w3c schools su python</a><br>
+        <a href="https://pytutorial-it.readthedocs.io/_/downloads/it/python3.9/pdf/" class="with-margin-right">Guida a python</a><br>
+        <a href="https://www.html.it/guide/guida-python/" class="with-margin-right">html.it su python</a>
+        <h4 class="with-margin-right">Framework flask:</h4>
+        <a href="https://www.tutorialspoint.com/flask/index.htm" class="with-margin-right">tutorial su tutorialspoint</a> <br>
+        <a href="https://www.javatpoint.com/flask-tutorial" class="with-margin-right">tutorial su javatpoint</a> <br>
+        <a href="https://thinkinfi.com/upload-and-display-image-in-flask-python/#google_vignette" class="with-margin-right">Caricare immagini</a>
+        <h4 class="with-margin-right">Su Tkinter:</h4>
+        <a href="https://www.geeksforgeeks.org/python-gui-tkinter/" class="with-margin-right">tutorial su geeksforgeeks</a><br>
+        <a href="https://www.javatpoint.com/python-tkinter" class="with-margin-right">Tkinter su javatpoint</a>
+        <h4 class="with-margin-right">Blockchain:</h4>
+        <a href="https://www.tutorialspoint.com/blockchain/blockchain_quick_guide.htm" class="with-margin-right">Tutorial blockchain</a>
+    </div>
+
+   <footer class="py-3">
+        <p>About</p>
+        <a href="link_al_tuo_sito" target="_blank">
+            <img src="link_alla_tua_immagine_footer.jpg" alt="Link al Tuo Sito" class="img-fluid">
+        </a>
+    </footer>
+
+    <!-- Includi jQuery e il JavaScript di Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
