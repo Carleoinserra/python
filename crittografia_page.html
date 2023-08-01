@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Title</title>
+    <style>
+        body {
+           font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Imposta l'altezza minima del corpo a 100% dell'altezza visibile */
+            margin: 0;
+        }
+
+        /* Aggiungi uno sfondo al menu */
+        nav {
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        nav::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("link_al_tuo_sfondo_menu.jpg");
+            background-size: cover;
+            opacity: 0.5; /* Opacità dell'immagine di sfondo */
+            z-index: -1;
+        }
+
+        nav a {
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+            margin-right: 20px; /* Aggiungi spazio tra le voci della navbar */
+        }
+
+        .center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: calc(100vh - 166px); /* Calcola la dimensione corretta per centrare il contenuto */
+        }
+
+        .content img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .content h2 {
+            font-size: 24px;
+        }
+
+        /* Classe per titoli e link con margine a destra maggiore */
+        .with-margin-right {
+            margin-right: 30px; /* Puoi regolare il valore del margine a tuo piacimento */
+        }
+
+         footer {
+            padding-top: 20px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            margin-top: auto; /* Imposta il margine superiore a "auto" per spingere il footer in fondo alla pagina */
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 5px; /* Aggiungi uno spazio tra i link nel footer */
+        }
+
+        /* Aggiungi stili per il footer quando si visualizza su dispositivi mobili */
+        @media (max-width: 767.98px) {
+              footer {
+            padding-top: 20px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            margin-top: auto; /* Imposta il margine superiore a "auto" per spingere il footer in fondo alla pagina */
+        }
+
+
+       footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 5px; /* Aggiungi uno spazio tra i link nel footer */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Posiziona il menu nell'header -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+            <div class="container">
+                <!-- Bottone per il menu a panino -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menu principale -->
+                <div class="collapse navbar-collapse mr-auto" id="navbarNav"> <!-- Aggiungi la classe "mr-auto" -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tkinter_page.html">Tkinter</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="flask_page.html">Flask</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="crittografia_page.html">Crittografia</a>
+                        </li>
+                        <li class="nav-item ml-auto"> <!-- Aggiungi la classe "ml-auto" -->
+                            <a class="nav-link" href="sitografia.html">Link Utili</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Lista dei documenti che ti hanno aiutato a sviluppare questo materiale -->
+        <h2 class="with-margin-right">Blockchain:</h2>
+        <p>
+          Una blockchain è una lista crescente di record, chiamati blocchi, che sono collegati tra loro utilizzando la crittografia. Ogni blocco contiene l'hash crittografico del blocco precedente, un timestamp e dati di transazione. La blockchain è stata molto discussa in questi giorni, principalmente perché è il fondamento della famosissima criptovaluta al mondo, il Bitcoin. Molti governi e grandi istituti bancari hanno deciso di basare molte delle loro transazioni convenzionali sul concetto di blockchain. Le applicazioni e il potenziale di questa tecnologia sono enormi e si ritiene possa cambiare il modo in cui vengono effettuate le transazioni in vari settori.<br>
+            <br><br>
+             <img src="link_del_tuo_file_immagine.png" alt="Immagine di Flask">
+            Negli ultimi anni, c'è stata molta attenzione sulla tecnologia blockchain. Molti l'hanno descritta come la tecnologia più rivoluzionaria del decennio. In particolare, i mercati finanziari potrebbero essere quelli più colpiti.
+
+La tecnologia blockchain viene adottata in molti settori, come la sanità, i farmaci, le assicurazioni, le proprietà intelligenti, l'automotive e persino dai governi.
+
+Tuttavia, finora l'implementazione di blockchain di maggior successo è il Bitcoin - un sistema di denaro elettronico peer-to-peer, che incidentalmente è anche la prima implementazione della tecnologia blockchain. Pertanto, per comprendere la tecnologia blockchain, è meglio capire come è progettato e implementato il sistema Bitcoin.</p>
+<h4 class="with-margin-right">Blockchain funzionamento:</h4>
+<p>
+    Chiunque desideri ottenere servizi da una terza parte che ha pubblicizzato sulla rete, crea prima una transazione (messaggio per il destinatario desiderato).
+Durante un dato periodo di tempo, potrebbero esserci molti mittenti (acquirenti) e destinatari (venditori) che creano tali transazioni.
+Tutte le transazioni vengono trasmesse sulla rete a tutti i nodi. Nota che non è necessario che una data transazione raggiunga ogni singolo nodo della rete.
+ <img src="link_del_tuo_file_immagine.png" alt="Immagine di Flask">
+        </p> <br><br><br>
+        <p>
+     Ogni nodo assembla le nuove transazioni in un blocco. Nota che l'insieme di transazioni in ciascun blocco è indipendente dall'insieme in blocchi creati da altri e sarà naturalmente diverso dagli altri. Questo non importa; il sistema garantisce che ogni transazione trasmessa sulla rete venga inclusa in qualche blocco entro un periodo di tempo ragionevole. In genere, il mittente incentivizzerà il nodo offrendo una certa quantità di bitcoin al minatore per i suoi sforzi. Il minatore potrebbe optare per dare la priorità all'inclusione nel blocco a coloro con incentivi più elevati.
+
+
+
+        </p>
+         <img src="link_del_tuo_file_immagine.png" alt="Immagine di Flask">
+        <br><br><br>
+        <p>
+     Il nodo ora lavora per trovare la prova di lavoro per il blocco assemblato.
+
+Quando il nodo trova una prova di lavoro, diffonde il blocco assemblato sulla rete.
+
+I nodi che ricevono il nuovo blocco lo accettano solo dopo aver verificato che tutte le transazioni nel blocco siano valide e che le monete non siano già state spese in altre transazioni precedenti.
+
+
+
+
+        </p>
+         <img src="link_del_tuo_file_immagine.png" alt="Immagine di Flask">
+         <br><br><br>
+
+        <p>
+        Se il blocco viene accettato come valido, il nodo che sta lavorando sul proprio nuovo blocco dovrà riassemblare le transazioni nel suo blocco, assicurandosi che non vi siano duplicazioni. Il nodo lavora quindi per trovare la prova di lavoro per il suo blocco appena creato; durante questo processo, prenderà l'hash del blocco accettato come hash precedente.
+In questo modo, la blockchain continua a crescere indefinitamente. Man mano che i miner trovano nuove prove di lavoro e aggiungono blocchi alla blockchain, il registro delle transazioni viene continuamente esteso e mantenuto in modo sicuro e immutabile. La catena di blocchi è una sequenza sempre crescente di blocchi, ognuno collegato al precedente tramite i loro hash, formando una struttura a catena che registra tutte le transazioni verificate nella rete Bitcoin.
+
+        </p>
+        <img src="link_del_tuo_file_immagine.png" alt="Immagine di Flask">
+          <h4 class="with-margin-right">Blockchain esempio in python:</h4>
+         <p> Nel programma market_new.py andiamo a creare inizialmente due tabelle all'interno del database "talentform" di mysql:<br>
+        La prima tabella chiamata user, ci servirà per registrare gli utenti nell'applicazione tramite la loro mail e la loro passwprd<br>
+
+        <pre><code class="python">class Contocorrente:
+import hashlib
+import time
+
+class Block:
+    def __init__(self, index, previous_hash, timestamp, data, hash):
+        self.index = index
+        self.previous_hash = previous_hash
+        self.timestamp = timestamp
+        self.data = data
+        self.hash = hash
+
+class Blockchain:
+    def __init__(self):
+        self.chain = []
+        self.create_genesis_block()
+
+    def create_genesis_block(self):
+        # Crea il blocco di genesi
+        genesis_block = Block(0, "0", time.time(), "Blocco di genesi", self.calculate_hash("0"))
+        self.chain.append(genesis_block)
+
+    def add_block(self, data):
+        # Aggiunge un nuovo blocco alla blockchain
+        index = len(self.chain)
+        previous_hash = self.chain[-1].hash
+        timestamp = time.time()
+        hash = self.calculate_hash(str(index) + previous_hash + str(timestamp) + data)
+        new_block = Block(index, previous_hash, timestamp, data, hash)
+        self.chain.append(new_block)
+
+    def calculate_hash(self, data):
+        # Calcola l'hash SHA-256 del blocco
+        return hashlib.sha256(data.encode()).hexdigest()
+</code></pre>
+<p>
+Nell'esempio sopra, abbiamo definito due classi: Block e Blockchain.<br>
+
+La classe Block rappresenta un singolo blocco all'interno della blockchain e ha i seguenti attributi:<br>
+<ul>
+<li>index: Il numero di sequenza del blocco all'interno della catena.</li>
+<li>previous_hash: L'hash del blocco precedente nella catena. Questo collegamento rende la blockchain immutabile.</li>
+<li>timestamp: L'istante di tempo in cui il blocco è stato creato.</li>
+<li>data: I dati o le transazioni da includere nel blocco.</li>
+<li>hash: L'hash crittografico del blocco, calcolato utilizzando i dati e l'hash del blocco precedente.</li></ul>
+La classe Blockchain rappresenta l'intera catena di blocchi e ha i seguenti attributi e metodi:
+<ul>
+<li>chain: Una lista che contiene i blocchi della blockchain.</li>
+<li>create_genesis_block(): Questo metodo crea il blocco di genesi, che è il primo blocco della catena e non ha un blocco precedente. Il blocco di genesi viene aggiunto alla catena all'inizio.</li>
+<li>add_block(data): Questo metodo aggiunge un nuovo blocco alla catena. Riceve i dati o le transazioni da includere nel nuovo blocco, calcola l'hash del blocco e lo aggiunge alla catena.</li>
+<li>calculate_hash(data): Questo metodo calcola l'hash SHA-256 del blocco utilizzando i dati forniti.</ul>
+L'idea di base di questa classe Blockchain è che vengano creati blocchi contenenti dati e collocati in una lista per formare una catena. Ogni blocco contiene l'hash del blocco precedente, formando una connessione crittografica tra tutti i blocchi. Questa struttura dati offre una forma di immutabilità poiché la modifica di un blocco comporterebbe la modifica dell'hash del blocco successivo e invaliderebbe tutta la catena. La Blockchain è quindi resistente alla manipolazione dei dati e offre un modo per immagazzinare dati in modo sicuro e trasparente.
+
+
+
+
+
+</p>
+    </div>
+
+   <footer class="py-3">
+        <p>About</p>
+        <a href="link_al_tuo_sito" target="_blank">
+            <img src="link_alla_tua_immagine_footer.jpg" alt="Link al Tuo Sito" class="img-fluid">
+        </a>
+    </footer>
+
+    <!-- Includi jQuery e il JavaScript di Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
