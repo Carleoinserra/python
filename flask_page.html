@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Title</title>
+    <style>
+        body {
+           font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Imposta l'altezza minima del corpo a 100% dell'altezza visibile */
+            margin: 0;
+        }
+
+        /* Aggiungi uno sfondo al menu */
+        nav {
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        nav::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("link_al_tuo_sfondo_menu.jpg");
+            background-size: cover;
+            opacity: 0.5; /* Opacità dell'immagine di sfondo */
+            z-index: -1;
+        }
+
+        nav a {
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+            margin-right: 20px; /* Aggiungi spazio tra le voci della navbar */
+        }
+
+        .center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: calc(100vh - 166px); /* Calcola la dimensione corretta per centrare il contenuto */
+        }
+
+        .content img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .content h2 {
+            font-size: 24px;
+        }
+
+        /* Classe per titoli e link con margine a destra maggiore */
+        .with-margin-right {
+            margin-right: 30px; /* Puoi regolare il valore del margine a tuo piacimento */
+        }
+
+         footer {
+            padding-top: 20px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            margin-top: auto; /* Imposta il margine superiore a "auto" per spingere il footer in fondo alla pagina */
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 5px; /* Aggiungi uno spazio tra i link nel footer */
+        }
+
+        /* Aggiungi stili per il footer quando si visualizza su dispositivi mobili */
+        @media (max-width: 767.98px) {
+              footer {
+            padding-top: 20px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            margin-top: auto; /* Imposta il margine superiore a "auto" per spingere il footer in fondo alla pagina */
+        }
+
+
+       footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 5px; /* Aggiungi uno spazio tra i link nel footer */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Posiziona il menu nell'header -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+            <div class="container">
+                <!-- Bottone per il menu a panino -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menu principale -->
+                <div class="collapse navbar-collapse mr-auto" id="navbarNav"> <!-- Aggiungi la classe "mr-auto" -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tkinter_page.html">Tkinter</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="flask_page.html">Flask</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="crittografia_page.html">Crittografia</a>
+                        </li>
+                        <li class="nav-item ml-auto"> <!-- Aggiungi la classe "ml-auto" -->
+                            <a class="nav-link" href="#link-utili">Link Utili</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Lista dei documenti che ti hanno aiutato a sviluppare questo materiale -->
+       <h2>Flask: un framework per lo sviluppo web in Python</h2>
+    <img src="link_del_tuo_file_immagine.png" alt="Immagine di Flask">
+
+    <p>Flask è un framework leggero e flessibile per lo sviluppo di applicazioni web in Python. È stato creato per semplificare il processo di creazione di applicazioni web e API (Application Programming Interface) utilizzando Python. Flask è considerato un micro-framework perché fornisce solo il minimo necessario per costruire applicazioni web, senza incorporare componenti aggiuntivi non necessari.</p>
+
+    <h3>Caratteristiche chiave di Flask:</h3>
+    <ul>
+       <li><span style="color: red;">Semplicità:</span> Flask è noto per la sua semplicità e facilità d'uso. L'API è intuitiva e minimale, permettendo agli sviluppatori di iniziare rapidamente con lo sviluppo web in Python.</li>
+        <li><span style="color: red;">Routing:</span> Flask fornisce un sistema di routing che collega gli URL specificati alle funzioni Python corrispondenti. In questo modo, puoi gestire le richieste HTTP in modo efficiente e strutturare le tue applicazioni in base alle diverse azioni richieste dagli utenti.</li>
+        <li><span style="color: red;">Template:</span> Flask supporta l'utilizzo di template, che consentono di separare il codice HTML dal codice Python. Questo rende più facile la creazione di pagine web dinamiche con dati generati dal server.</li>
+        <li><span style="color: red;">Integrazione con WSGI:</span> Flask è basato su Werkzeug, un toolkit WSGI (Web Server Gateway Interface) per Python. Questa integrazione semplifica la gestione delle richieste HTTP e delle risposte da parte dell'applicazione web.</li>
+        <li><span style="color: red;">Estendibilità:</span> Anche se Flask è un micro-framework, supporta l'aggiunta di estensioni e pacchetti per estendere le funzionalità base secondo le esigenze del progetto.</li>
+        <li><span style="color: red;">Leggerezza:</span> Flask è progettato per essere leggero e offre solo il necessario per creare applicazioni web. Ciò lo rende adatto per progetti più piccoli o per quelli che richiedono una maggiore flessibilità di scelta delle librerie e delle componenti da utilizzare.</li>
+    </ul>
+        </p>
+    <h4 class="with-margin-right">Esempio di utilizzo di Flask: il programma market_new.py</h4>
+    <p> Nel programma market_new.py andiamo a creare inizialmente due tabelle all'interno del database "talentform" di mysql:<br>
+        La prima tabella chiamata user, ci servirà per registrare gli utenti nell'applicazione tramite la loro mail e la loro passwprd<br>
+
+        <pre><code class="python">class Contocorrente:
+   # Configura la connessione al database MySQL
+db = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="",
+    database="talentform"
+)
+
+# Crea la tabella per gli utenti se non esiste già
+cursor = db.cursor()
+cursor.execute("CREATE TABLE IF NOT EXISTS users (id INT AUTO_INCREMENT PRIMARY KEY, user_email VARCHAR(255) UNIQUE, password VARCHAR(255))")
+db.commit()
+
+# Crea la tabella per gli ordini se non esiste già
+cursor.execute("CREATE TABLE IF NOT EXISTS orders (id INT AUTO_INCREMENT PRIMARY KEY, user_email VARCHAR(255), order_date DATETIME, product_banco VARCHAR(255), product_freschi VARCHAR(255), product_frigo VARCHAR(255), elettrodomestici VARCHAR(255), total_price DECIMAL(10, 2))")
+db.commit()
+</code></pre>
+    </p>
+        <p> Inoltre andiamo già a definire un dizionario che associa al tipo di prodotto un prezzo in euro
+
+        <pre><code class="python"># Dizionario con i prezzi dei prodotti
+product_prices = {
+    "Tonno in scatola": 2.50,
+    "Pasta": 2.00,
+    "Latte": 1.20,
+    "Carne": 8.00,
+    "Pesce": 12.50,
+    "Verdura": 2.50,
+    "Yogurt": 1.80,
+    "Formaggio": 3.50,
+    "Televisore": 500.00,
+    "Lavatrice": 400.00
+}
+</code></pre>
+
+        <p> Nella funzione login associata alla route ("/") quindi all'avvia dell'applicazione
+        vengono innanzitutto controllati i valori degli input testuali "user_mail" e "password" ottenuti dal form html loginUser.html.
+        Successivamente viene controllato se l'utente esiste: <br>
+        1) Per fare questo si vanno a prendere tutti gli utenti registrati nella tabella users con le relative password: <br>
+        Se l'utente viene trovato l'applicazione ritorna accedendo alla route "/selection" che vedremo in seguito ma porta alla pagina con la scelta dei prodotti <br>
+        Altrimenti stampa un messaggio di errore
+
+        <pre><code class="python">
+def login():
+    if request.method == "POST":
+        user_email = request.form.get("user_email")
+        password = request.form.get("password")
+
+        # Controlla se l'utente esiste
+        cursor.execute("SELECT * FROM users WHERE user_email = %s", (user_email,))
+        user = cursor.fetchone()
+
+        if user:
+            # Verifica la password
+            hashed_password = hashlib.sha256(password.encode()).hexdigest()
+            if user[2] == hashed_password:
+                session["user_email"] = user_email
+                return redirect(url_for("selections"))
+            else:
+                return render_template("loginUser.html", error="Credenziali non valide. Riprova.")
+        else:
+            return render_template("loginUser.html", error="Utente non esistente. Registrati.")
+
+    return render_template("loginUser.html", error=None)
+</code></pre>
+          <p> Questo è il codice html che verrà presentato all'utente quando accede all'applicazione.
+        Alcune note: <br>
+        Quando l'utente è in possesso di uno username e la password questo viene letto dalla funzione precedente login() tramite l'action del form <br>
+        Se l'utente non è in possesso di questi dati viene reindirizzato all'app route di flask con indirizzo /registration
+
+        <pre><code class="python">
+&lt;form method="post" action="/"&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label for="user_email"&gt;Email:&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="user_email" name="user_email" required&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label for="password"&gt;Password:&lt;/label&gt;
+        &lt;input type="password" class="form-control" id="password" name="password" required&gt;
+    &lt;/div&gt;
+    &lt;input type="submit" class="btn btn-primary" value="Login"&gt;
+&lt;/form&gt;
+
+        &lt;p class="mt-3"&gt;Non hai un account? &lt;a href="/registration"&gt;Registrati&lt;/a&gt;&lt;/p&gt;
+
+        </code></pre></p>
+ <p> Analizziamo il codice della fuznione selections()<br>
+        1) Innanzitutto dobbiamo dire che è associata alla url "/selections" e che accetta chiamate http sia di tipo get che di tipo post <br>
+        2) Dopo viene verificato se lo username dell'utente è autenticato nella sessione: per fare questo utilizziamo il controllo (if "user_email" not in session)  chè verifica se l'utente è autenticato controllando se l'indirizzo email dell'utente è presente nella sessione dell'utente. La sessione in Flask è un meccanismo per memorizzare dati specifici per ogni utente. Se l'utente non è autenticato (l'indirizzo email non è presente nella sessione), l'applicazione reindirizza l'utente alla pagina di login utilizzando redirect(url_for("login")). In questo modo, solo gli utenti autenticati possono accedere alla pagina "/selections".<br>
+        3) Una volta effettuata questa operazione ed estratto l'user corrente questo viene utilizzato in una query per verificare se quell'utente ha già effetuato un ordine presso il sito <br>
+        4) A questo punto vengono letti i valori delle scelte dell'utente relative ai select con i prodotti, queste serviranno a stabilire anche il prezzo totale della spesa<br>
+        5) Tutti i dati, compresa la data attuale vengono regitrati nella tabella orders <br>
+        6) infine la funzione ritorna la pagina html con le select, e vengono passati come parametri il dizionario con i prodotti, e (se esiste) l'ultimo ordine effettuato dal cliente
+
+
+
+        <pre><code class="python">
+@app.route("/selections", methods=["GET", "POST"])
+def selections():
+    # Verifica se l'utente è autenticato
+    if "user_email" not in session:
+        return redirect(url_for("login"))
+    user_email = session["user_email"]
+    cursor.execute("SELECT * FROM orders WHERE user_email = %s ORDER BY last_access DESC LIMIT 1", (user_email,))
+    last_order = cursor.fetchone()
+    if request.method == "POST":
+        user_email = session["user_email"]
+        product_banco = request.form.get("product_banco")
+        product_freschi = request.form.get("product_freschi")
+        product_frigo = request.form.get("product_frigo")
+        elettrodomestici = request.form.get("elettrodomestici")
+
+        # Calcola il prezzo totale dell'ordine
+        total_price = 0.0
+
+        if product_banco:
+            total_price += product_prices.get(product_banco, 0.0)
+
+        if product_freschi:
+            total_price += product_prices.get(product_freschi, 0.0)
+
+        if product_frigo:
+            total_price += product_prices.get(product_frigo, 0.0)
+
+        if elettrodomestici:
+            total_price += product_prices.get(elettrodomestici, 0.0)
+
+        # Registra l'ordine nel database
+        order_date = datetime.datetime.now()
+        cursor.execute("INSERT INTO orders (user_email, last_access, product_banco, product_freschi, product_frigo, elettrodomestici, total_price) VALUES (%s, %s, %s, %s, %s, %s, %s)", (user_email, order_date, product_banco, product_freschi, product_frigo, elettrodomestici, total_price))
+        db.commit()
+
+        return "Ordine completato! Grazie per il tuo acquisto."
+
+    return render_template("super.html", products=product_prices, last_order=last_order)
+</code></pre></p>
+        <p> Anche in questo caso per il codice completo dell'applicazione puoi accedere da github <a href="https://github.com/Carleoinserra/corsoluglio/blob/main/marketNew.py ">Marketnew.py</a>
+        Invece per i file html attinenti all'applicazione puoi andare sulla cartella templates. I file che riguradano l'applicazione sono: <br>
+           )1 loginUser.html <br>
+            2) registration.html <br>
+            3) super.html <br>
+            <a href="https://github.com/Carleoinserra/corsoluglio/blob/main/marketNew.py ">Cartella templates</a><br>
+        Attezione!!! ricordati che per rendere i tuoi file html in una applicazione flask e necessario inserirli in una cartella chiamata "templates"</p>
+    </div>
+
+   <footer class="py-3">
+        <p>About</p>
+        <a href="link_al_tuo_sito" target="_blank">
+            <img src="link_alla_tua_immagine_footer.jpg" alt="Link al Tuo Sito" class="img-fluid">
+        </a>
+    </footer>
+
+    <!-- Includi jQuery e il JavaScript di Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
